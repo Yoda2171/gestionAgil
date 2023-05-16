@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="form-container">
+    <div
+      style="
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        margin-top: 20px;
+      "
+    >
+      <button
+        style="
+          padding: 10px 20px;
+          font-size: 18px;
+          background-color: #333;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        "
+        routerLink="../"
+      >
+        Volver
+      </button>
+    </div>
+    <h2>Subir Publicación</h2>
+    <form method="post">
+      <label for="titulo">Título:</label>
+      <input
+        type="text"
+        id="titulo"
+        name="titulo"
+        required
+        placeholder="¿Cual es la idea?"
+      />
+
+      <label for="contenido">Contenido:</label>
+      <textarea
+        id="contenido"
+        name="contenido"
+        rows="4"
+        required
+        placeholder="Desarrolla la idea"
+      ></textarea>
+
+      <input type="submit" value="Subir Publicación" onclick="swal()" />
+    </form>
+  </div>
+</div>
+
+

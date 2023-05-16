@@ -1,26 +1,29 @@
-<p>navbar works!</p>
-<div class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    
-</div>
+<head>
+  <title>Foro - Página de Inicio</title>
+</head>
+<body>
+  <div class="header">
+    <h1>Foro - Página de Inicio</h1>
+  </div>
+
+  <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
+    <button style="padding: 10px 20px; font-size: 18px; background-color: #333; color: #fff; border: none; border-radius: 5px; cursor: pointer;"
+      routerLink="crear-pub">
+      Subir publicación
+    </button>
+  </div>
+  <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
+    <button style="padding: 10px 20px; font-size: 18px; background-color: #333; color: #fff; border: none; border-radius: 5px; cursor: pointer;"
+      routerLink="login">
+      Login
+    </button>
+  </div>
+
+  <div class="container">
+      <h2>Publicaciones Recientes</h2>
+      <div class="post">
+        <h3 class="post-title">Título de la publicación</h3>
+        <p class="post-content">Contenido de la publicación...</p>
+        <span class="post-date">Fecha de publicación: 10 de enero de 2022</span>
+      </div>
+  </div>

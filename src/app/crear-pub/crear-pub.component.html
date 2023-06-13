@@ -1,106 +1,68 @@
-<style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-    }
-    
-    .header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    
-    .header h1 {
-      font-size: 24px;
-      margin: 0;
-    }
-    
-    .container {
-      max-width: 800px;
-      margin: 20px auto;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    
-    .form-container {
-      margin-bottom: 20px;
-    }
-    
-    .form-container label {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-    
-    .form-container input[type="text"],
-    .form-container textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 3px;
-    }
-    
-    .form-container input[type="submit"] {
-      background-color: #333;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-    }
-    
-    .form-container input[type="submit"]:hover {
-      background-color: #555;
-    }
-    
-    .post {
-      background-color: #f9f9f9;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 3px;
-      border: 1px solid #ccc;
-    }
-    
-    .post-title {
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-    
-    .post-content {
-      margin-bottom: 10px;
-    }
-    
-    .post-date {
-      font-size: 12px;
-      color: #888;
-    }
-  </style>
-
 <div class="container">
+  <div class="form-container">
 
-    <div class="form-container">
-      <div style="display: flex; justify-content: left
-      ; align-items: left; margin-top: 20px;">
-        <button style="padding: 10px 20px; font-size: 18px; background-color: #333; color: #fff; border: none; border-radius: 5px; cursor: pointer;"
-          routerLink="../">
-          Volver
-        </button>
-      </div>
-      <h2>Subir Publicación</h2>
-      <form action="/guardar-publicacion" method="post">
-        <label for="titulo">Título:</label>
-        <input type="text" id="titulo" name="titulo" required placeholder="¿Cual es la idea?">
-        
-        <label for="contenido">Contenido:</label>
-        <textarea id="contenido" name="contenido" rows="4" required placeholder="Desarrolla la idea"></textarea>
-        
-        
-        <input type="submit" value="Subir Publicación">
+    <a class="imgnav"><img src="assets/Imagenes/Logo_DuocUC.svg.png" alt="" height="50px"></a>
+    <div
+      style="
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        margin-top: 20px;
+      "
+    >
+  
+      <button
+        style="
+          padding: 10px 20px;
+          font-size: 18px;
+          background-color: #333;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        "
+        routerLink="../"
+      >
+        Volver
+      </button>
+    </div>
+    <h2>Subir Publicación</h2>
+    <form method="post">
+      <label for="titulo">Título:</label>
+      <input
+        type="text"
+        id="titulo"
+        name="titulo"
+        requiredcad
+        placeholder="¿Cual es la idea?"
+      />
+      <br>
+      <form action="">
+        <label for="Temas">Selecciona un tema</label>
+        <select name="Temas" id="temas">
+          <option value="Tema">Selecciona un tema</option>
+          <option value="General">General</option>
+          <option value="Informatica">Informatica</option>
+          <option value="IntegPlataformas">Integracion de plataformas</option>
+          <option value="Programacion">Programacion</option>
+          <option value="DesWeb">Desarollo web</option>
+          <option value="GestionAgil">Gestion agil</option>
+          <option value="ProgAlgoritmos">Programacion de algoritmos</option>
+        </select>
       </form>
-      </div>
+      <br>
+      <label for="contenido">Contenido:</label>
+      <textarea
+        id="contenido"
+        name="contenido"
+        rows="4"
+        required
+        placeholder="Desarrolla la idea"
+      ></textarea>
+
+      <input type="submit" value="Subir Publicación" onclick="swal()" />
+    </form>
   </div>
+</div>
+
+

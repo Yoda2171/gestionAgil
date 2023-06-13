@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { CrearPubComponent } from './crear-pub/crear-pub.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
 
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
     path: 'crear-pub',
     component: CrearPubComponent
+  },
+  {
+    path:'login',
+    component: LoginComponent
   }
 ];
 

@@ -1,23 +1,45 @@
 <head>
+  <style>
+    .navbar-custom {
+      background-color: #005EB8;
+    }
+    .footer {
+      background-color: #FFE400;
+      color: yellow;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .footer a {
+      color: blue;
+      text-decoration: none;
+    }
+    
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  
   <title>Foro - Página de Inicio</title>
 </head>
 <body>
-  <div class="header">
-    <a class="imgnav"> <img src="assets/Imagenes/Logo_DuocUC.svg.png" alt="" height="50px"></a>
-  </div>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="assets/Imagenes/Logo_DuocUC.svg.png" alt="Logo" width="170" height="50" class="d-inline-block align-text-top">
+      </a>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <button class="btn btn-secondary" routerLink="crear-pub">Crear publicación</button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-secondary" routerLink="login">Cerrar Sesión</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-  <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
-    <button style="padding: 10px 20px; font-size: 18px; background-color: #333; color: #fff; border: none; border-radius: 5px; cursor: pointer; "
-      routerLink="crear-pub">
-      Subir publicación
-    </button>
-  </div>
-  <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
-    <button style="padding: 10px 20px; font-size: 18px; background-color: #333; color: #fff; border: none; border-radius: 5px; cursor: pointer;"
-      routerLink="login">
-      Login
-    </button>
-  </div>
+
 
   <div class="container">
       <h2>Publicaciones Recientes</h2>
@@ -27,3 +49,14 @@
         <span class="post-date">Fecha de publicación: 10 de enero de 2022</span>
       </div>
   </div>
+
+  <footer class="footer mt-auto py-3">
+    <div class="container">
+      <span class="text-muted">Síguenos en <a href="https://www.instagram.com/duocuc.cl/">Instagram</a> | Sitio web de Duoc UC: <a href="https://www.duoc.cl/">www.duoc.cl</a></span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+  

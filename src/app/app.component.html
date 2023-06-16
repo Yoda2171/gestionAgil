@@ -1,9 +1,73 @@
+<head>
+  <style>
+    .navbar-custom {
+      background-color: #005eb8;
+    }
+    .footer {
+      background-color: #ffe400;
+      color: yellow;
+      padding: 20px;
+      text-align: center;
+    }
 
-    <router-outlet></router-outlet> 
-    
-        
+    .footer a {
+      color: blue;
+      text-decoration: none;
+    }
 
-        
-        
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 
+  <title>Foro - Página de Inicio</title>
+</head>
 
+<nav class="navbar navbar-expand-lg navbar-custom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img
+        src="assets/Imagenes/Logo_DuocUC.svg.png"
+        alt="Logo"
+        width=""
+        height="50"
+        class="d-inline-block align-text-top"
+      />
+    </a>
+
+    <ul class="navbar-nav">
+      <li *ngIf="cheklogin" class="nav-item mr-auto">
+        <a class="btn btn-white" type="button" href="profile">
+          Profile
+        </a>
+      </li>
+      <li class="nav-item ml-auto">
+        <a class="btn btn-white" type="button" href="crear-pub">
+          Crear publicación
+        </a>
+      </li>
+      <li *ngIf="cheklogin" class="nav-item ml-auto">
+        <button class="btn btn-white" type="button" (click)="logout()">
+          Cerrar Sesión
+        </button>
+      </li>
+      <li *ngIf="!cheklogin" class="nav-item ml-auto">
+        <a class="btn btn-white" type="button" href="login">
+          Login
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<footer class="footer mt-auto py-3">
+  <div class="container">
+    <span class="text-muted"
+      >Síguenos en
+      <a href="https://www.instagram.com/duocuc.cl/">Instagram</a> | Sitio web
+      de Duoc UC: <a href="https://www.duoc.cl/">www.duoc.cl</a></span
+    >
+  </div>
+</footer>

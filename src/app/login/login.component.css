@@ -29,7 +29,7 @@
     border-radius: 3px;
   }
   
-  .login-container input[type="submit"] {
+  .login-container button[type="submit"] {
     background-color: #333;
     color: #fff;
     border: none;
@@ -37,6 +37,15 @@
     cursor: pointer;
   }
   
-  .login-container input[type="submit"]:hover {
+  .login-container button[type="submit"]:hover {
     background-color: #555;
+  }
+  .contraseña-olvidada {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .recuperar_contraseña{
+    color: blue;
+    text-decoration: underline;
   }

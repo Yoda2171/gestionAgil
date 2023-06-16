@@ -1,5 +1,8 @@
 <div class="container">
   <div class="form-container">
+    <a class="imgnav"
+      ><img src="assets/Imagenes/Logo_DuocUC.svg.png" alt="" height="50px"
+    /></a>
     <div
       style="
         display: flex;
@@ -7,45 +10,56 @@
         align-items: left;
         margin-top: 20px;
       "
-    >
-      <button
-        style="
-          padding: 10px 20px;
-          font-size: 18px;
-          background-color: #333;
-          color: #fff;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-        "
-        routerLink="../"
-      >
-        Volver
-      </button>
-    </div>
+    ></div>
     <h2>Subir Publicación</h2>
-    <form method="post">
+    <form [formGroup]="formPost" (submit)="createPost()">
       <label for="titulo">Título:</label>
       <input
         type="text"
         id="titulo"
         name="titulo"
-        required
+        requiredcad
         placeholder="¿Cual es la idea?"
+        formControlName="titulo"
       />
+      <p
+        class="text-danger"
+        *ngIf="formPost.get('titulo')?.touched && formPost.get('titulo')?.errors?.['required']"
+      >
+        Este campo es requerido
+      </p>
+      <br />
 
+      <label for="Temas">Selecciona un tema</label>
+      <select name="ramo_id" formControlName="ramo_id">
+        <option *ngFor="let item of ramo" [value]="item.id">{{ item.ramo }}</option>
+      </select>
+      <p
+        class="text-danger"
+        *ngIf="formPost.get('ramo_id')?.touched && formPost.get('ramo_id')?.errors?.['required']"
+      >
+        Este campo es requerido
+      </p>
+
+      <br />
       <label for="contenido">Contenido:</label>
       <textarea
-        id="contenido"
-        name="contenido"
+        id="body"
+        name="body"
         rows="4"
         required
         placeholder="Desarrolla la idea"
+        formControlName="body"
       ></textarea>
 
-      <input type="submit" value="Subir Publicación" onclick="swal()" />
+      <p
+        class="text-danger"
+        *ngIf="formPost.get('body')?.touched && formPost.get('body')?.errors?.['required']"
+      >
+        Este campo es requerido
+      </p>
+
+      <input type="submit" value="Subir Publicación" />
     </form>
   </div>
 </div>
-
-

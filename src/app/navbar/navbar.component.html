@@ -1,29 +1,20 @@
-<head>
-  <title>Foro - Página de Inicio</title>
-</head>
-<body>
-  <div class="header">
-    <h1>Foro - Página de Inicio</h1>
-  </div>
 
-  <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
-    <button style="padding: 10px 20px; font-size: 18px; background-color: #333; color: #fff; border: none; border-radius: 5px; cursor: pointer;"
-      routerLink="crear-pub">
-      Subir publicación
-    </button>
-  </div>
-  <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
-    <button style="padding: 10px 20px; font-size: 18px; background-color: #333; color: #fff; border: none; border-radius: 5px; cursor: pointer;"
-      routerLink="login">
-      Login
-    </button>
-  </div>
+  <div class="container"  *ngFor="let item of post">
+      <div class="post"  >
+        <img  [src]="item?.user_id?.foto"  class="rounded float-start" style="width: 55px; " alt="...">
 
-  <div class="container">
-      <h2>Publicaciones Recientes</h2>
-      <div class="post">
-        <h3 class="post-title">Título de la publicación</h3>
-        <p class="post-content">Contenido de la publicación...</p>
-        <span class="post-date">Fecha de publicación: 10 de enero de 2022</span>
+        <h3 class="post-title ">{{item.titulo}}</h3>
+        <span class="post-date">{{item?.ramo_id?.ramo}}</span>
+        <p class="post-content">{{item.body}}</p>
+        <span class="post-date">{{item.fechaCreacion}}</span>
       </div>
   </div>
+  
+
+
+
+  
+
+
+
+  

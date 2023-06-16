@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { CrearPubComponent } from './crear-pub/crear-pub.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
 
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path:'login',
     component: LoginComponent
+  },
+  {
+    path:'profile',
+    component: ProfileComponent
   }
 ];
 

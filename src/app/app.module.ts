@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { CrearPubComponent } from './crear-pub/crear-pub.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProfileComponent } from './profile/profile.component'
+
 
 @NgModule({
   declarations: [
@@ -13,10 +17,15 @@ import { CrearPubComponent } from './crear-pub/crear-pub.component';
     NavbarComponent,
     LoginComponent,
     CrearPubComponent,
+    ProfileComponent,
+  
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

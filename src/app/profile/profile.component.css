@@ -1,0 +1,35 @@
+ /* Estilos CSS para el perfil */
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .profile {
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+
+  .profile img {
+    display: block;
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+  }
+
+  .profile p {
+    margin-bottom: 10px;
+  }
+
+  .profile label {
+    font-weight: bold;
+  }

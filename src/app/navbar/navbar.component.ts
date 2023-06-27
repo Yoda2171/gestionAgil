@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PostService } from '../services/post.service';
 import { Post } from '../interface/post';
@@ -12,7 +12,7 @@ import { Comentario } from '../interface/comentario';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit{
   cheklogin: boolean = false;
   post: Post[] = [];
   user!: User;
@@ -58,7 +58,8 @@ export class NavbarComponent {
     this.postService.createComentario(id,newComentario).subscribe({
       next: (res: any) => {
         console.log(res);
-        this.router.navigate(['/']);
+        this.formComentario.reset();
+        this.getallPosts();
         
       },
       error: (err: any) => {

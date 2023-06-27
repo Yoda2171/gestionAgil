@@ -80,4 +80,14 @@ body {
     color: #888;
   }
   
+  .author {
+    font-weight: bold;
+  }
   
+  .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 10px;
+  }

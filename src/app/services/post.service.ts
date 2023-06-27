@@ -28,5 +28,18 @@ export class PostService {
 
 
 
+  createComentario(post:any,comentario:any){
+    return this.http.post('http://localhost:3000/post/'+post,comentario);
+  }
+
+
+  getComentarios(id:number){
+    return this.http.get('http://localhost:3000/post/'+id+'/comentarios');
+  }
+
+
+
+
+
 
 }

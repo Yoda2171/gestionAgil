@@ -1,20 +1,59 @@
+<div class="container" *ngFor="let item of post">
+  <div class="post">
+    <img
+      [src]="item?.user_id?.foto"
+      class="rounded float-start"
+      style="width: 55px"
+      alt="..."
+    />
 
-  <div class="container"  *ngFor="let item of post">
-      <div class="post"  >
-        <img  [src]="item?.user_id?.foto"  class="rounded float-start" style="width: 55px; " alt="...">
-
-        <h3 class="post-title ">{{item.titulo}}</h3>
-        <span class="post-date">{{item?.ramo_id?.ramo}}</span>
-        <p class="post-content">{{item.body}}</p>
-        <span class="post-date">{{item.fechaCreacion}}</span>
-      </div>
+    <h3 class="post-title">{{ item.titulo }}</h3>
+    <span class="post-date">{{ item?.ramo_id?.ramo }}</span>
+    <p class="post-content">{{ item.body }}</p>
+    <span class="post-date">{{ item.fechaCreacion }}</span>
   </div>
-  
+  <div class="input-group mb-3">
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-light">
+        <i class="fa-regular fa-comment"></i>
+      </button>
+      <button type="button" class="btn btn-light">
+        <i class="fa-regular fa-heart"></i>
+      </button>
+      <button type="button" class="btn btn-light">
+        <i class="fa-solid fa-share"></i>
+      </button>
+    </div>
+  </div>
 
+  <form [formGroup]="formComentario" (submit)="createComentario(item?.id)">
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Escribe un comentario publico..."
+        formControlName="comentario"
+      />
+      <button
+        class="btn btn-outline-secondary"
+        type="submit"
+        id="button-addon2"
+      >
+        Comentar
+      </button>
+    </div>
+  </form>
 
-
-  
-
-
-
-  
+  <div>
+    <ul>
+      <li *ngFor="let comentario of item.comentarios_id" class="comment">
+       
+          <img class="rounded float-start mx-2" style="width: 55px" [src]="comentario.foto" alt="Foto de usuario" />
+          <p class="author">{{ comentario.username }}</p>
+          <p>{{ comentario.comentario }}</p>
+        
+        
+      </li>
+    </ul>
+  </div>
+</div>

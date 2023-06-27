@@ -1,0 +1,27 @@
+<div class="container py-5">
+    <div class="chat-container">
+        <div class="usuarios-lista px-3">
+          <h2>Usuarios</h2>
+          <ul>
+            <li *ngFor="let user of users" (click)="selectUser(user)" [class.active]="user  === selectedUser">
+              {{ user.username }}
+            </li>
+          </ul>
+        </div>
+      
+        <div class="chat">
+          <h2>Chat</h2>
+          <div *ngIf="selectedUser" class="mensajes">
+            <div *ngFor="let mensaje of mensaje" class="mensaje">
+              {{ mensaje.mensaje }}
+            </div>
+          </div>
+          <div *ngIf="selectedUser" class="formulario">
+            <input type="text" [(ngModel)]="text" placeholder="Escribe un mensaje">
+            <button (click)="sendMessage()">Enviar</button>
+          </div>
+        </div>
+      </div>
+</div>
+
+

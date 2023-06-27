@@ -46,6 +46,11 @@
           Crear publicación
         </a>
       </li>
+      <li  *ngIf="cheklogin" class="nav-item ml-auto">
+        <a class="btn btn-white" type="button" href="chat">
+          Chat
+        </a>
+      </li>
       <li *ngIf="cheklogin" class="nav-item ml-auto">
         <button class="btn btn-white" type="button" (click)="logout()">
           Cerrar Sesión

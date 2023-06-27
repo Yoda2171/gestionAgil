@@ -5,6 +5,7 @@ import { CrearPubComponent } from './crear-pub/crear-pub.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ChatComponent } from './chat/chat.component';
 
 const routes: Routes = [
 
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path:'profile',
     component: ProfileComponent
+  },
+  {
+    path:'chat',
+    component: ChatComponent
   }
 ];
 

@@ -1,4 +1,6 @@
+import { Comentario } from "./comentario";
 import { Post } from "./post";
+import { Chat } from './chat';
 
 export interface Data{
     data?: User;
@@ -12,4 +14,7 @@ export interface User {
     correo?: string;
     password?: string;
     posts_id?: Post[];
+    comentario_id?: Comentario[];
+    chat_id?:Chat[]
+    current_user_id?:Chat[]
 }

@@ -8,7 +8,8 @@ import { LoginComponent } from './login/login.component';
 import { CrearPubComponent } from './crear-pub/crear-pub.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ProfileComponent } from './profile/profile.component'
+import { ProfileComponent } from './profile/profile.component';
+import { ChatComponent } from './chat/chat.component'
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { ProfileComponent } from './profile/profile.component'
     LoginComponent,
     CrearPubComponent,
     ProfileComponent,
+    ChatComponent,
   
   ],
   imports: [
